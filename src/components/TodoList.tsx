@@ -15,7 +15,7 @@ interface TodoListProps {
 
 const TodoList: FC<TodoListProps> = ({ todos, removeTodo, toggleTodoComplete }) => {
     return (
-        <ul>
+        <ul className='space-y-4'>
             {todos.map((todo) => (
                 <TodoItem
                     key={todo.id}
@@ -29,3 +29,5 @@ const TodoList: FC<TodoListProps> = ({ todos, removeTodo, toggleTodoComplete }) 
 };
 
 export default TodoList;
+
+
