@@ -64,31 +64,10 @@ function App() {
     }
 
     return (
-        // <div className="flex justify-center items-center min-h-screen bg-gray-50 py-8">
-        //     <div className="w-1/2 bg-white p-6 rounded-lg shadow-lg">
-        //         <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">TODOs</h1>
-        //         <InputField text={text} handleInput={setText} handleSubmit={addTodo} />
-        //         <TodoList
-        //             todos={filteredTodos}
-        //             toggleTodoComplete={toggleTodoComplete}
-        //             removeTodo={removeTodo}
-        //         />
-        //         <div className="flex justify-between items-center mt-6">
-        //             <span className="text-sm text-gray-600">{activeTodos.length} items left</span>
-        //             <div className="space-x-2">
-        //                 <Button variant="ghost" onClick={showAll}>All</Button>
-        //                 <Button variant="ghost" onClick={showActive}>Active</Button>
-        //                 <Button variant="ghost" onClick={showCompleted}>Completed</Button>
-        //                 <Button variant="ghost" onClick={clearCompleted}>Clear completed</Button>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
         <div className="flex justify-center items-center min-h-screen bg-gray-50 py-8">
             <div className="w-1/2 bg-white p-6 rounded-lg shadow-lg">
                 <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">TODOs</h1>
                 <InputField text={text} handleInput={setText} handleSubmit={addTodo} />
-                {/* Scrollable list of todos */}
                 <div className="h-60 overflow-y-auto mb-6">
                     <TodoList
                         todos={filteredTodos}
@@ -97,7 +76,7 @@ function App() {
                     />
                 </div>
                 <div className="flex justify-between items-center mt-6">
-                    <span className="text-sm text-gray-600">{activeTodos.length} items left</span>
+                    <span className="text-sm text-gray-600">{activeTodos.length} active items left</span>
                     <div className="space-x-2">
                         <Button variant="ghost" onClick={showAll}>All</Button>
                         <Button variant="ghost" onClick={showActive}>Active</Button>
